@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -52,3 +52,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+// get data diri sendiri
+$route['user']['get'] = 'UsersController/index';
+
+// get data motor
+$route['motor']['get'] = 'MotorController/index';
+
+// get data cicil
+$route['cicil']['get'] = 'CicilController/index';
+
+// get data DP
+$route['uangmuka']['get'] = 'DPController/index';
+
+// Tabe perhitungan
+$route['penjualan']['get'] = 'HitungController/index';
+$route['penjualan']['post'] = 'HitungController/index';
+$route['penjualan/(:num)']['put'] = 'HitungController/index/$1';
+$route['penjualan/(:num)']['delete'] = 'HitungController/index/$1';
